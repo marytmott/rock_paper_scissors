@@ -37,7 +37,12 @@ body {
 
 .image-holder {
   display: inline-block;
+  border: 4px solid white;
 
+}
+
+.image-holder:hover {
+  border: 4px solid black;
 }
 
 img {
