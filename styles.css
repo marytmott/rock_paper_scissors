@@ -9,30 +9,20 @@ html {
 
 body {
   font-family: Helvetica, sans-serif;
-  background-color: ;
 }
-
-/* {
-  width: 500px;
-  float: left;
-  width:;
-
-
-
-}*/
 
 .main, .encaps-scoreboard {
   margin: 0 auto;
   text-align: center;
   width: 960px;
 }
-
 .game-text {
   height: 25px;
+  font-size: 18px;
 }
 
-#player-choice {
-
+#winner {
+  font-weight: bold;
 }
 
 .image-holder {
