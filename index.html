@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock, Paper, Scissors</title>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="main">
+    <h1>Rock, Paper, Scissors</h1>
+    <h2>Choose your weapon!</h2>
+    <div id="player-choice">
+      <div class="image-holder">
+        <img src="images/rock-clipart-ycoqgeKcE.gif" data-choice="rock"/>
+      </div>
+      <div class="image-holder">
+        <img src="images/paper-with-writing-clip-art_t.jpg" data-choice="paper"/>
+      </div>
+      <div class="image-holder">
+        <img src="images/scissors-clipart.jpg" data-choice="scissors"/>
+      </div>
+      <div id="game-data" class="game-text">
+      </div>
+      <div id="winner" class="game-text">
+      </div>
+    </div>
+  </div>
+
+  <div class="encaps-scoreboard">
+    <div class="scoreboard">
+      <h3>Score</h3>
+    </div>
+    <div class="scoreboard">
+      <h2 id="won">0</h2>
+      <p>won</p>
+    </div>
+    <div class="scoreboard">
+      <h2 id="lost">0</h2>
+      <p>lost</p>
+    </div>
+    <div class="scoreboard">
+      <h2 id="ties">0</h2>
+      <p>ties</p>
+    </div>
+    <div class="scoreboard">
+      <h2 id="matches">0</h2>
+      <p>no. of matches</p>
+    </div>
+    <div class="scoreboard">
+      <p class="reset">Reset</p>
+      </div>
+  </div>
+  <script src="rockPaperScissors.js"></script>
+</body>
+</html>
