@@ -84,9 +84,7 @@ function resetScores() {
   lostNode.innerHTML = playerLost;
 }
 
-
-reset.addEventListener('click', resetScores);
 playerChoiceDiv.addEventListener('click', playGame);
-
+reset.addEventListener('click', resetScores);
 
 })();
