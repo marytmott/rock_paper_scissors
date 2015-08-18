@@ -37,15 +37,16 @@ body {
 
 .image-holder {
   display: inline-block;
-  padding: 50px;
 
 }
 
 img {
   height: 175px;
+  margin: 50px;
 }
 
-.encaps-scoreboard {
+.encaps-scoreboard h2 {
+  color: blue;
 
 }
 
@@ -54,6 +55,7 @@ img {
   width: 15%;
   text-align: center;
 }
+
 
 .reset:hover {
   color: blue;
