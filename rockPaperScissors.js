@@ -3,88 +3,75 @@
   var gameDataDiv = document.getElementById('game-data');
   var winnerDiv = document.getElementById('winner');
   var reset = document.getElementsByClassName('reset')[0];
-  var matches = 0;
-  var playerWon = 0;
-  var playerLost = 0;
-  var tiedGames = 0;
 
 
-function playGame(e) {
-  var player = e.target.getAttribute('data-choice');
-  var opponent = opponentChoice();
+  function playGame(e) {
+    var player = e.target.getAttribute('data-choice');
+    var opponent = opponentChoice();
 
-  e.stopPropagation();
-  choicesText(player, opponent);
-  getWinner(player, opponent);
-}
-
-
-function opponentChoice() {
-  var num = Math.floor(Math.random() * 3); //range of 0 - 2
-
-  switch(num) {
-    case 0:
-      return 'rock';
-    case 1:
-      return 'paper';
-    case 2:
-      return 'scissors';
+    e.stopPropagation();
+    choicesText(player, opponent);
+    getWinner(player, opponent);
   }
-}
 
 
-function choicesText(player, opponent) {
- gameDataDiv.innerHTML = 'Player chose ' +  player + '. Opponent chose ' + opponent + '.';
-}
+  function opponentChoice() {
+    var num = Math.floor(Math.random() * 3); //range of 0 - 2
 
-
-function getWinner(player, opponent) {
-  var playerWins1 = player === 'rock' && opponent === 'scissors';
-  var playerWins2 = player === 'paper' && opponent === 'rock';
-  var playerWins3 = player === 'scissors' && opponent === 'paper';
-  var wonNode = document.getElementById('won');
-  var lostNode = document.getElementById('lost');
-  var tiedNode = document.getElementById('ties');
-  var matchesNode = document.getElementById('matches');
-
-  matches++;
-  matchesNode.innerHTML = matches;
-
-  if (player === opponent) {
-    tiedGames++;
-    tiedNode.innerHTML = tiedGames;
-    winnerDiv.innerHTML = 'The result is a tie!';
-  } else if (playerWins1 || playerWins2 || playerWins3) {
-    playerWon++;
-    wonNode.innerHTML = playerWon;
-    winnerDiv.innerHTML = 'You win!';
-  } else {
-    playerLost++;
-    lostNode.innerHTML = playerLost;
-    winnerDiv.innerHTML = 'Sorry, your opponent won.';
+    switch(num) {
+      case 0:
+        return 'rock';
+      case 1:
+        return 'paper';
+      case 2:
+        return 'scissors';
+    }
   }
-}
 
-function resetScores() {
-  var wonNode = document.getElementById('won');
-  var lostNode = document.getElementById('lost');
-  var tiedNode = document.getElementById('ties');
-  var matchesNode = document.getElementById('matches');
 
-  matches = 0;
-  tiedGames = 0;
-  playerWon = 0;
-  playerLost = 0;
+  function choicesText(player, opponent) {
+   gameDataDiv.innerHTML = 'Player chose ' +  player + '. Opponent chose ' + opponent + '.';
+  }
 
-  gameDataDiv.innerHTML = '';
-  winnerDiv.innerHTML = '';
-  matchesNode.innerHTML = matches;
-  tiedNode.innerHTML = tiedGames;
-  wonNode.innerHTML = playerWon;
-  lostNode.innerHTML = playerLost;
-}
 
-playerChoiceDiv.addEventListener('click', playGame);
-reset.addEventListener('click', resetScores);
+  function getWinner(player, opponent) {
+    var playerWins1 = player === 'rock' && opponent === 'scissors';
+    var playerWins2 = player === 'paper' && opponent === 'rock';
+    var playerWins3 = player === 'scissors' && opponent === 'paper';
+    var wonNode = document.getElementById('won');
+    var lostNode = document.getElementById('lost');
+    var tiedNode = document.getElementById('ties');
+    var matchesNode = document.getElementById('matches');
+
+    matchesNode.innerHTML++;
+
+    if (player === opponent) {
+      tiedNode.innerHTML++;
+      winnerDiv.innerHTML = 'The result is a tie!';
+    } else if (playerWins1 || playerWins2 || playerWins3) {
+      wonNode.innerHTML++;
+      winnerDiv.innerHTML = 'You win!';
+    } else {
+      lostNode.innerHTML++;
+      winnerDiv.innerHTML = 'Sorry, your opponent won.';
+    }
+  }
+
+  function resetScores() {
+    var wonNode = document.getElementById('won');
+    var lostNode = document.getElementById('lost');
+    var tiedNode = document.getElementById('ties');
+    var matchesNode = document.getElementById('matches');
+
+    gameDataDiv.innerHTML = '';
+    winnerDiv.innerHTML = '';
+    matchesNode.innerHTML = 0;
+    tiedNode.innerHTML = 0;
+    wonNode.innerHTML = 0;
+    lostNode.innerHTML = 0;
+  }
+
+  playerChoiceDiv.addEventListener('click', playGame);
+  reset.addEventListener('click', resetScores);
 
 })();
