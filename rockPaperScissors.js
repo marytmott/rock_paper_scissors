@@ -40,7 +40,7 @@ $(function() {
 
 
   function choicesText(player, opponent) {
-   $gameDataDiv.html('Player chose ' +  player + '. Opponent chose ' + opponent + '.');
+   $gameDataDiv.html('You chose ' +  player + '. Opponent chose ' + opponent + '.');
   }
 
 
