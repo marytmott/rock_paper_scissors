@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 .main, .encaps-scoreboard {
@@ -16,6 +16,11 @@ body {
   text-align: center;
   width: 960px;
 }
+
+.main h2 {
+  font-style: italic;
+}
+
 .game-text {
   height: 25px;
   font-size: 18px;

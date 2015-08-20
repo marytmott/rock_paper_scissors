@@ -2,7 +2,11 @@
 <html>
 <head>
   <title>Rock, Paper, Scissors</title>
-  <link href="styles.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Nunito" />
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="rockPaperScissors.js"></script>
+
 </head>
 
 <body>
@@ -10,13 +14,13 @@
     <h1>Rock, Paper, Scissors</h1>
     <h2>Choose your weapon!</h2>
     <div id="player-choice">
-      <div class="image-holder" data-choice="rock">
+      <div class="image-holder">
         <img src="images/rock-clipart-ycoqgeKcE.gif" data-choice="rock"/>
       </div>
-      <div class="image-holder" data-choice="paper">
+      <div class="image-holder">
         <img src="images/paper-with-writing-clip-art_t.jpg" data-choice="paper"/>
       </div>
-      <div class="image-holder" data-choice="scissors">
+      <div class="image-holder">
         <img src="images/scissors-clipart.jpg" data-choice="scissors"/>
       </div><br /><br />
       <div id="game-data" class="game-text">
@@ -50,6 +54,5 @@
       <h3 class="reset">Reset</h3>
     </div>
   </div>
-  <script src="rockPaperScissors.js"></script>
 </body>
 </html>
