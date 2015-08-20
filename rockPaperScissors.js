@@ -49,17 +49,17 @@ $(function() {
     var playerWins2 = player === 'paper' && opponent === 'rock';
     var playerWins3 = player === 'scissors' && opponent === 'paper';
 
-    $matchesNode.html(parseInt($($matchesNode).html(), 10)+1);
+    $matchesNode.html(parseInt($($matchesNode).html(), 10) + 1);
     //10 is wtf radix value??...also, thank you stackoverflow for this parseInt tip w/ .html()
 
     if (player === opponent) {
-      $tiedNode.html(parseInt($($tiedNode).html(), 10)+1);
+      $tiedNode.html(parseInt($($tiedNode).html(), 10) + 1);
       $winnerDiv.html('The result is a tie!');
     } else if (playerWins1 || playerWins2 || playerWins3) {
-      $wonNode.html(parseInt($($wonNode).html(), 10)+1);
+      $wonNode.html(parseInt($($wonNode).html(), 10) + 1);
       $winnerDiv.html('You win!');
     } else {
-      $lostNode.html(parseInt($($lostNode).html(), 10)+1);
+      $lostNode.html(parseInt($($lostNode).html(), 10) + 1);
       $winnerDiv.html('Sorry, your opponent won.');
     }
   }
