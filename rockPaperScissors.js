@@ -49,8 +49,8 @@ $(function() {
     var playerWins2 = player === 'paper' && opponent === 'rock';
     var playerWins3 = player === 'scissors' && opponent === 'paper';
 
+    //radix @ 10 for all-browser integration of parseInt
     $matchesNode.html(parseInt($($matchesNode).html(), 10) + 1);
-    //10 is wtf radix value??...also, thank you stackoverflow for this parseInt tip w/ .html()
 
     if (player === opponent) {
       $tiedNode.html(parseInt($($tiedNode).html(), 10) + 1);
